@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>learn Resources</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <h1>学生管理系统</h1>
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <tr>
+            <td>学生名字</td>
+            <td>学生年龄</td>
+            <td>学生性别</td>
+        </tr>
+
+        <tr th:each="stu : ${students}">
+            <td th:text="${stu.name}">猪猪</td>
+            <td th:text="${stu.age}">2</td>
+            <td th:text="${stu.sex}">2</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
